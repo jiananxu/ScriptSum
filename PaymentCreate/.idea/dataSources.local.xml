@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="SMP_AG_BBD_ADB@10.249.5.77" uuid="70a32a64-6be7-41c6-8080-c30f692b5653">
+      <database-info product="MySQL" version="5.5.8-mycat-1.5.1-RELEASE-20160416173036" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>test</user-name>
+      <introspection-schemas>*:smp_pub_sid</introspection-schemas>
+    </data-source>
+    <data-source name="SMP_BL_ADB@10.249.5.77" uuid="a8354acf-a06d-46aa-8af8-70e60796d6d1">
+      <database-info product="MySQL" version="5.5.8-mycat-1.5.1-RELEASE-20160416173036" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>test</user-name>
+      <introspection-schemas>*:smp_billing_adb2</introspection-schemas>
+    </data-source>
+  </component>
+</project>

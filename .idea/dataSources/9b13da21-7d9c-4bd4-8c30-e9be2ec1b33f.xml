@@ -1,0 +1,5203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="INT SMP_PM_ADB">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="smp_payment_adb2">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="smp_accounting_adb"/>
+    <schema id="7" parent="1" name="smp_aggregate_bbd_adb"/>
+    <schema id="8" parent="1" name="smp_aggregate_bmd_adb"/>
+    <schema id="9" parent="1" name="smp_aggregate_btd_adb1"/>
+    <schema id="10" parent="1" name="smp_aggregate_btd_adb2"/>
+    <schema id="11" parent="1" name="smp_aggregate_mbd_adb"/>
+    <schema id="12" parent="1" name="smp_aggregate_md_adb"/>
+    <schema id="13" parent="1" name="smp_aggregate_mtd_adb1"/>
+    <schema id="14" parent="1" name="smp_aggregate_mtd_adb2"/>
+    <schema id="15" parent="1" name="smp_billing_adb1"/>
+    <schema id="16" parent="1" name="smp_billing_adb2"/>
+    <schema id="17" parent="1" name="smp_payment_adb1">
+      <Current>1</Current>
+    </schema>
+    <schema id="18" parent="1" name="smp_pub_sid"/>
+    <schema id="19" parent="1" name="smp_settle_adb1"/>
+    <schema id="20" parent="1" name="smp_settle_adb2"/>
+    <schema id="21" parent="1" name="smp_workflow_sid1"/>
+    <schema id="22" parent="1" name="smp_workflow_sid2"/>
+    <table id="23" parent="2" name="t_sac_basic_con_item_snop"/>
+    <table id="24" parent="2" name="t_sac_payment_acc_dtl_vou_h"/>
+    <table id="25" parent="2" name="t_sac_payment_acc_dtl_vou_l"/>
+    <table id="26" parent="2" name="t_sac_payment_acc_sum_vou_h"/>
+    <table id="27" parent="2" name="t_sac_payment_acc_sum_vou_l"/>
+    <table id="28" parent="2" name="t_sac_payment_b_grp_sum_info"/>
+    <table id="29" parent="2" name="t_sac_payment_batch_info"/>
+    <table id="30" parent="2" name="t_sac_payment_batch_map_info"/>
+    <table id="31" parent="2" name="t_sac_payment_code_info"/>
+    <table id="32" parent="2" name="t_sac_payment_command"/>
+    <table id="33" parent="2" name="t_sac_payment_command_s"/>
+    <table id="34" parent="2" name="t_sac_payment_con_pay_amt_info"/>
+    <table id="35" parent="2" name="t_sac_payment_e_rec_info"/>
+    <table id="36" parent="2" name="t_sac_payment_imp_ap_pay_head"/>
+    <table id="37" parent="2" name="t_sac_payment_imp_ap_pay_line"/>
+    <table id="38" parent="2" name="t_sac_payment_info"/>
+    <table id="39" parent="2" name="t_sac_payment_info_locked_rec"/>
+    <table id="40" parent="2" name="t_sac_payment_list"/>
+    <table id="41" parent="2" name="t_sac_payment_prepay_app"/>
+    <table id="42" parent="2" name="t_sac_payment_prepay_con_item"/>
+    <table id="43" parent="2" name="t_sac_payment_rb_opt_app_rec"/>
+    <table id="44" parent="2" name="t_sac_payment_reapproved_rec"/>
+    <table id="45" parent="2" name="t_sac_payment_rel_billing_info"/>
+    <table id="46" parent="2" name="t_sac_payment_rel_invoice"/>
+    <table id="47" parent="2" name="t_sac_payment_rel_rec_info"/>
+    <table id="48" parent="2" name="t_sac_payment_soa_instance_log"/>
+    <table id="49" parent="2" name="t_sac_payment_status_track_rec"/>
+    <table id="50" parent="2" name="t_sac_payment_task_locked_rec"/>
+    <routine id="51" parent="2" name="to_enum_value">
+      <RoutineKind>function</RoutineKind>
+    </routine>
+    <column id="52" parent="23" name="CON_ITEM_SNOP_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="23" name="CON_ITEM_ID">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="23" name="CONTRACT_INFO_ID">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="23" name="CONTRACT_NUM">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="23" name="PROVINCE_CODE">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="23" name="OU_TRANSACTION_ORG_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="23" name="OU_TRANSACTION_ORG_CODE">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="23" name="OU_TRANSACTION_ORG_NAME">
+      <Position>8</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="23" name="HR_ORG_CODE">
+      <Position>9</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="23" name="HR_ORG_NAME">
+      <Position>10</Position>
+      <DataType>varchar(240)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="23" name="KEY_ITEMS_ID">
+      <Position>11</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="23" name="PROJECT_INFO_ID">
+      <Position>12</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="64" parent="23" name="PROJECT_NUMBER">
+      <Position>13</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="65" parent="23" name="PROJECT_NAME">
+      <Position>14</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="66" parent="23" name="PAYMENT_PHASE_SEQ">
+      <Position>15</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="23" name="PAYMENT_STAGE_ENUM_ID">
+      <Position>16</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="23" name="PAYMENT_PERCENT">
+      <Position>17</Position>
+      <DataType>decimal(18,8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="23" name="PAYMENT_AMOUNT">
+      <Position>18</Position>
+      <DataType>decimal(18,8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="23" name="AUDIT_AMOUNT">
+      <Position>19</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="71" parent="23" name="PLAN_PAY_DATE">
+      <Position>20</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="72" parent="23" name="IS_CAN_PAY">
+      <Position>21</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="73" parent="23" name="IS_PAID_OFF">
+      <Position>22</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="74" parent="23" name="PROJECT_STATUS_UPDATE_DATE">
+      <Position>23</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="75" parent="23" name="PAY_DATE_STANDARD_ENUM_ID">
+      <Position>24</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="76" parent="23" name="DELAY_DAYS">
+      <Position>25</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="77" parent="23" name="PAYMENT_METHODS_ENUM_ID">
+      <Position>26</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="78" parent="23" name="PAYMENT_DESC">
+      <Position>27</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="79" parent="23" name="THIS_PAID_OFF_AMOUNT">
+      <Position>28</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="80" parent="23" name="CONTRACT_TERM_TYPE">
+      <Position>29</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="81" parent="23" name="ORIGINAL_CON_ITEM_ID">
+      <Position>30</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="82" parent="23" name="PAYMENT_INFO_ID">
+      <Position>31</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="83" parent="23" name="PAYMENT_INFO_CODE">
+      <Position>32</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="84" parent="23" name="CREATED_BY">
+      <Position>33</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="85" parent="23" name="CREATION_DATE">
+      <Position>34</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="86" parent="23" name="LAST_UPDATED_BY">
+      <Position>35</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="23" name="LAST_UPDATE_DATE">
+      <Position>36</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="88" parent="23" name="RECORD_VERSION">
+      <Position>37</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="89" parent="23" name="DELETED_FLAG">
+      <Position>38</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="90" parent="23" name="DELETED_BY">
+      <Position>39</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="91" parent="23" name="DELETION_DATE">
+      <Position>40</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="92" parent="23" name="SHARDING_ID">
+      <Position>41</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="23" name="ATTRIBUTE1">
+      <Position>42</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="94" parent="23" name="ATTRIBUTE2">
+      <Position>43</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="95" parent="23" name="ATTRIBUTE3">
+      <Position>44</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="96" parent="23" name="ATTRIBUTE4">
+      <Position>45</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="97" parent="23" name="ATTRIBUTE5">
+      <Position>46</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="98" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CON_ITEM_SNOP_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="99" parent="24" name="DETAIL_VOUCHER_HEAD_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="100" parent="24" name="SUMMARY_VOUCHER_HEAD_ID">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="24" name="SUMMARY_FLAG">
+      <Position>3</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="102" parent="24" name="DETAIL_VOUCHER_NUMBER">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="103" parent="24" name="DOCUMENT_CATEGORY_ENUM_ID">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="104" parent="24" name="DOCUMENT_INFO_ID">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="105" parent="24" name="DOCUMENT_NUMBER">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="106" parent="24" name="ACCOUNTING_ACC_BOOK">
+      <Position>8</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="107" parent="24" name="ACCOUNTING_ORG_ID">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="108" parent="24" name="ACCOUNTING_ORG_CODE">
+      <Position>10</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="109" parent="24" name="ACCOUNTING_ORG_NAME">
+      <Position>11</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="110" parent="24" name="VOUCHER_CATEGORY_ENUM_ID">
+      <Position>12</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="111" parent="24" name="VOUCHER_NAME">
+      <Position>13</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="112" parent="24" name="VOUCHER_DESCRIPTION">
+      <Position>14</Position>
+      <Comment>凭证说明</Comment>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="113" parent="24" name="GENERAL_LEDGER_DATE">
+      <Position>15</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="114" parent="24" name="DETAIL_DATA_ID">
+      <Position>16</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="115" parent="24" name="CURRENCY_ENUM_ID">
+      <Position>17</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="116" parent="24" name="EXCHANGE_RATE_TYPE_ENMU_ID">
+      <Position>18</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="117" parent="24" name="EXCHANGE_RATE_DATE">
+      <Position>19</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="118" parent="24" name="EXCHANGE_RATE">
+      <Position>20</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="119" parent="24" name="ATTACHMENT_SHEETS">
+      <Position>21</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="120" parent="24" name="ORIGINAL_DTL_VOUCHER_HEAD_ID">
+      <Position>22</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="121" parent="24" name="REVERSED_DATE">
+      <Position>23</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="122" parent="24" name="INVOICES_CREATOR_NUMBER">
+      <Position>24</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="123" parent="24" name="INVOICES_CREATOR_NAME">
+      <Position>25</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="124" parent="24" name="FIN_RECHECKER_NUM">
+      <Position>26</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="125" parent="24" name="FIN_RECHECKER_NAME">
+      <Position>27</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="126" parent="24" name="TRANSFER_TO_ERP">
+      <Position>28</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="127" parent="24" name="ORIGINAL_SUM_VOUCHER_HEAD_ID">
+      <Position>29</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="128" parent="24" name="WRITE_OFF_FLAG">
+      <Position>30</Position>
+      <DataType>tinyint(4)|0</DataType>
+    </column>
+    <column id="129" parent="24" name="REMARK">
+      <Position>31</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="130" parent="24" name="CREATED_BY">
+      <Position>32</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="131" parent="24" name="CREATION_DATE">
+      <Position>33</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="132" parent="24" name="LAST_UPDATED_BY">
+      <Position>34</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="133" parent="24" name="LAST_UPDATE_DATE">
+      <Position>35</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="134" parent="24" name="RECORD_VERSION">
+      <Position>36</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="135" parent="24" name="DELETED_FLAG">
+      <Position>37</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="136" parent="24" name="DELETED_BY">
+      <Position>38</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="137" parent="24" name="DELETION_DATE">
+      <Position>39</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="138" parent="24" name="SHARDING_ID">
+      <Position>40</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="139" parent="24" name="ATTRIBUTE1">
+      <Position>41</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="140" parent="24" name="ATTRIBUTE2">
+      <Position>42</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="141" parent="24" name="ATTRIBUTE3">
+      <Position>43</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="142" parent="24" name="ATTRIBUTE4">
+      <Position>44</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="143" parent="24" name="ATTRIBUTE5">
+      <Position>45</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="144" parent="24" name="ATTRIBUTE6">
+      <Position>46</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="145" parent="24" name="ATTRIBUTE7">
+      <Position>47</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="146" parent="24" name="ATTRIBUTE8">
+      <Position>48</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="147" parent="24" name="ATTRIBUTE9">
+      <Position>49</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="148" parent="24" name="ATTRIBUTE10">
+      <Position>50</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <index id="149" parent="24" name="PAYMENT_ACC_DTL_VOU_H_IDX1">
+      <ColNames>DOCUMENT_INFO_ID</ColNames>
+    </index>
+    <index id="150" parent="24" name="T_SAC_PAYMENT_ACC_DTL_VOU_H_UK1">
+      <ColNames>DETAIL_VOUCHER_NUMBER</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="151" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>DETAIL_VOUCHER_HEAD_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="152" parent="24" name="T_SAC_PAYMENT_ACC_DTL_VOU_H_UK1">
+      <ColNames>DETAIL_VOUCHER_NUMBER</ColNames>
+      <UnderlyingIndexName>T_SAC_PAYMENT_ACC_DTL_VOU_H_UK1</UnderlyingIndexName>
+    </key>
+    <column id="153" parent="25" name="DETAIL_VOUCHER_LINE_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="154" parent="25" name="SUMMARY_VOUCHER_LINE_ID">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="155" parent="25" name="DETAIL_VOUCHER_HEAD_ID">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="156" parent="25" name="AP_HL_FLAG_ENUM_ID">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="157" parent="25" name="VOUCHAER_LINE_NUM">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="158" parent="25" name="DEBIT_CREDIT_ENUM_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="159" parent="25" name="SEGMENT1">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="160" parent="25" name="SEGMENT2">
+      <Position>8</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="161" parent="25" name="SEGMENT3">
+      <Position>9</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="162" parent="25" name="SEGMENT4">
+      <Position>10</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="163" parent="25" name="SEGMENT5">
+      <Position>11</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="164" parent="25" name="SEGMENT6">
+      <Position>12</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="165" parent="25" name="SEGMENT7">
+      <Position>13</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="166" parent="25" name="SEGMENT8">
+      <Position>14</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="167" parent="25" name="SEGMENT9">
+      <Position>15</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="168" parent="25" name="LINE_SUMMARY">
+      <Position>16</Position>
+      <Comment>行摘要</Comment>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="169" parent="25" name="DEBIT_AMOUNT">
+      <Position>17</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="170" parent="25" name="CREDIT_AMOUNT">
+      <Position>18</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="171" parent="25" name="FOREIGN_CURRENCY_DR_AMT">
+      <Position>19</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="172" parent="25" name="FOREIGN_CURRENCY_CR_AMT">
+      <Position>20</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="173" parent="25" name="REL_TRANS_CODE_ENUM_ID">
+      <Position>21</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="174" parent="25" name="TOTAL_COST_INDICATOR">
+      <Position>22</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="175" parent="25" name="LINE_TYPE_ENUM_ID">
+      <Position>23</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="176" parent="25" name="ORDER_MATCH_FLAG">
+      <Position>24</Position>
+      <Comment>是否匹配订单</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="177" parent="25" name="DETAIL_DATA_ID">
+      <Position>25</Position>
+      <Comment>明细数据行ID</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="178" parent="25" name="REMARK">
+      <Position>26</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="179" parent="25" name="CREATED_BY">
+      <Position>27</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="180" parent="25" name="CREATION_DATE">
+      <Position>28</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="181" parent="25" name="LAST_UPDATED_BY">
+      <Position>29</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="182" parent="25" name="LAST_UPDATE_DATE">
+      <Position>30</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="183" parent="25" name="RECORD_VERSION">
+      <Position>31</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="184" parent="25" name="DELETED_FLAG">
+      <Position>32</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="185" parent="25" name="DELETED_BY">
+      <Position>33</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="186" parent="25" name="DELETION_DATE">
+      <Position>34</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="187" parent="25" name="SHARDING_ID">
+      <Position>35</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="188" parent="25" name="ATTRIBUTE1">
+      <Position>36</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="189" parent="25" name="ATTRIBUTE2">
+      <Position>37</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="190" parent="25" name="ATTRIBUTE3">
+      <Position>38</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="191" parent="25" name="ATTRIBUTE4">
+      <Position>39</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="192" parent="25" name="ATTRIBUTE5">
+      <Position>40</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="193" parent="25" name="ATTRIBUTE6">
+      <Position>41</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="194" parent="25" name="ATTRIBUTE7">
+      <Position>42</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="195" parent="25" name="ATTRIBUTE8">
+      <Position>43</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="196" parent="25" name="ATTRIBUTE9">
+      <Position>44</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="197" parent="25" name="ATTRIBUTE10">
+      <Position>45</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <index id="198" parent="25" name="PAYMENT_ACC_DTL_VOU_L_IDX1">
+      <ColNames>DETAIL_VOUCHER_HEAD_ID</ColNames>
+    </index>
+    <key id="199" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>DETAIL_VOUCHER_LINE_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="200" parent="26" name="SUMMARY_VOUCHER_HEAD_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="201" parent="26" name="ACCOUNTING_ACC_BOOK">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="202" parent="26" name="ACCOUNTING_ORG_ID">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="203" parent="26" name="ACCOUNTING_ORG_CODE">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="204" parent="26" name="ACCOUNTING_ORG_NAME">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="205" parent="26" name="VOUCHER_NUMBER">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="206" parent="26" name="VOUCHER_CATEGORY_ENUM_ID">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="207" parent="26" name="VOUCHER_NAME">
+      <Position>8</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="208" parent="26" name="VOUCHER_DESCRIPTION">
+      <Position>9</Position>
+      <Comment>凭证说明</Comment>
+      <DataType>varchar(500)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="209" parent="26" name="GENERAL_LEDGER_DATE">
+      <Position>10</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="210" parent="26" name="GENERAL_LEDGER_BATCH_NAME">
+      <Position>11</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="211" parent="26" name="GENERAL_LEDGER_BATCH_DESC">
+      <Position>12</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="212" parent="26" name="CURRENCY_ENUM_ID">
+      <Position>13</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="213" parent="26" name="EXCHANGE_RATE_TYPE_ENMU_ID">
+      <Position>14</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="214" parent="26" name="EXCHANGE_RATE_DATE">
+      <Position>15</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="215" parent="26" name="EXCHANGE_RATE">
+      <Position>16</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="216" parent="26" name="INVOICES_CREATOR_NUMBER">
+      <Position>17</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="217" parent="26" name="INVOICES_CREATOR_NAME">
+      <Position>18</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="218" parent="26" name="FIN_RECHECKER_NUM">
+      <Position>19</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="219" parent="26" name="FIN_RECHECKER_NAME">
+      <Position>20</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="220" parent="26" name="ATTACHMENT_SHEETS">
+      <Position>21</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="221" parent="26" name="ACCOUNTING_STATUS_ENUM_ID">
+      <Position>22</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="222" parent="26" name="ORIGINAL_SUM_VOUCHER_HEAD_ID">
+      <Position>23</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="223" parent="26" name="ERP_VOUCHER_CODE">
+      <Position>24</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="224" parent="26" name="REVERSED_DATE">
+      <Position>25</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="225" parent="26" name="DOCUMENT_CATEGORY_ENUM_ID">
+      <Position>26</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="226" parent="26" name="DOCUMENT_NUMBER">
+      <Position>27</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="227" parent="26" name="DOCUMENT_INFO_ID">
+      <Position>28</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="228" parent="26" name="ERP_MODULE">
+      <Position>29</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="229" parent="26" name="GEN_INTERFACE_STAT_ENUM_ID">
+      <Position>30</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="230" parent="26" name="WRITE_OFF_FLAG">
+      <Position>31</Position>
+      <DataType>tinyint(4)|0</DataType>
+    </column>
+    <column id="231" parent="26" name="IS_GEN_INTERFACE_FLAG">
+      <Position>32</Position>
+      <DataType>tinyint(4)|0</DataType>
+    </column>
+    <column id="232" parent="26" name="WB_SERVICE_MESSAGE">
+      <Position>33</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="233" parent="26" name="E_RECORD_FLAG">
+      <Position>34</Position>
+      <Comment>电子档案推送标识</Comment>
+      <DataType>varchar(1)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="234" parent="26" name="IMP_ERP_DATE">
+      <Position>35</Position>
+      <Comment>导入ERP时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="235" parent="26" name="REMARK">
+      <Position>36</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="236" parent="26" name="CREATED_BY">
+      <Position>37</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="237" parent="26" name="CREATION_DATE">
+      <Position>38</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="238" parent="26" name="LAST_UPDATED_BY">
+      <Position>39</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="239" parent="26" name="LAST_UPDATE_DATE">
+      <Position>40</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="240" parent="26" name="RECORD_VERSION">
+      <Position>41</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="241" parent="26" name="DELETED_FLAG">
+      <Position>42</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="242" parent="26" name="DELETED_BY">
+      <Position>43</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="243" parent="26" name="DELETION_DATE">
+      <Position>44</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="244" parent="26" name="SHARDING_ID">
+      <Position>45</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="245" parent="26" name="ATTRIBUTE1">
+      <Position>46</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="246" parent="26" name="ATTRIBUTE2">
+      <Position>47</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="247" parent="26" name="ATTRIBUTE3">
+      <Position>48</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="248" parent="26" name="ATTRIBUTE4">
+      <Position>49</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="249" parent="26" name="ATTRIBUTE5">
+      <Position>50</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <index id="250" parent="26" name="PAYMENT_ACC_SUM_VOU_H_IDX1">
+      <ColNames>DOCUMENT_INFO_ID</ColNames>
+    </index>
+    <index id="251" parent="26" name="PAYMENT_ACC_SUM_VOU_H_IDX2">
+      <ColNames>VOUCHER_CATEGORY_ENUM_ID</ColNames>
+    </index>
+    <index id="252" parent="26" name="PAYMENT_ACC_SUM_VOU_H_IDX3">
+      <ColNames>ACCOUNTING_STATUS_ENUM_ID</ColNames>
+    </index>
+    <key id="253" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SUMMARY_VOUCHER_HEAD_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="254" parent="27" name="SUMMARY_VOUCHER_LINE_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="255" parent="27" name="SUMMARY_VOUCHER_HEAD_ID">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="256" parent="27" name="DEBIT_CREDIT_ENUM_ID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="257" parent="27" name="VOUCHER_LINE_NUM">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="258" parent="27" name="SEGMENT1">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="259" parent="27" name="SEGMENT2">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="260" parent="27" name="SEGMENT3">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="261" parent="27" name="SEGMENT4">
+      <Position>8</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="262" parent="27" name="SEGMENT5">
+      <Position>9</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="263" parent="27" name="SEGMENT6">
+      <Position>10</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="264" parent="27" name="SEGMENT7">
+      <Position>11</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="265" parent="27" name="SEGMENT8">
+      <Position>12</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="266" parent="27" name="SEGMENT9">
+      <Position>13</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="267" parent="27" name="LINE_SUMMARY">
+      <Position>14</Position>
+      <Comment>行摘要</Comment>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="268" parent="27" name="DEBIT_AMOUNT">
+      <Position>15</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="269" parent="27" name="CREDIT_AMOUNT">
+      <Position>16</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="270" parent="27" name="FOREIGN_CURRENCY_DR_AMT">
+      <Position>17</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="271" parent="27" name="FOREIGN_CURRENCY_CR_AMT">
+      <Position>18</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="272" parent="27" name="REL_TRANS_CODE_ENUM_ID">
+      <Position>19</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="273" parent="27" name="TOTAL_COST_INDICATOR">
+      <Position>20</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="274" parent="27" name="AP_HL_FLAG_ENUM_ID">
+      <Position>21</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="275" parent="27" name="ERROR_MESSAGE">
+      <Position>22</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="276" parent="27" name="ERP_PRI_KEY">
+      <Position>23</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="277" parent="27" name="ORDER_MATCH_FLAG">
+      <Position>24</Position>
+      <Comment>是否匹配订单</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="278" parent="27" name="REMARK">
+      <Position>25</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="279" parent="27" name="CREATED_BY">
+      <Position>26</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="280" parent="27" name="CREATION_DATE">
+      <Position>27</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="281" parent="27" name="LAST_UPDATED_BY">
+      <Position>28</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="282" parent="27" name="LAST_UPDATE_DATE">
+      <Position>29</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="283" parent="27" name="RECORD_VERSION">
+      <Position>30</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="284" parent="27" name="DELETED_FLAG">
+      <Position>31</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="285" parent="27" name="DELETED_BY">
+      <Position>32</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="286" parent="27" name="DELETION_DATE">
+      <Position>33</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="287" parent="27" name="SHARDING_ID">
+      <Position>34</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="288" parent="27" name="ATTRIBUTE1">
+      <Position>35</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="289" parent="27" name="ATTRIBUTE2">
+      <Position>36</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="290" parent="27" name="ATTRIBUTE3">
+      <Position>37</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="291" parent="27" name="ATTRIBUTE4">
+      <Position>38</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="292" parent="27" name="ATTRIBUTE5">
+      <Position>39</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="293" parent="27" name="ATTRIBUTE6">
+      <Position>40</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="294" parent="27" name="ATTRIBUTE7">
+      <Position>41</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="295" parent="27" name="ATTRIBUTE8">
+      <Position>42</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="296" parent="27" name="ATTRIBUTE9">
+      <Position>43</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="297" parent="27" name="ATTRIBUTE10">
+      <Position>44</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <index id="298" parent="27" name="PAYMENT_ACC_SUM_VOU_L_IDX1">
+      <ColNames>SUMMARY_VOUCHER_HEAD_ID</ColNames>
+    </index>
+    <key id="299" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SUMMARY_VOUCHER_LINE_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="300" parent="28" name="BILLING_GROUP_SUM_INFO_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="301" parent="28" name="BILLING_INFO_ID">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="302" parent="28" name="BILLING_CODE">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="303" parent="28" name="BILLING_DATE">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="304" parent="28" name="CONTRACT_INFO_ID">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="305" parent="28" name="CONTRACT_NUM">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="306" parent="28" name="CONTRACT_NAME">
+      <Position>7</Position>
+      <DataType>varchar(240)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="307" parent="28" name="PROJECT_INFO_ID">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="308" parent="28" name="PROJECT_NUMBER">
+      <Position>9</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="309" parent="28" name="PROJECT_NAME">
+      <Position>10</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="310" parent="28" name="ACTUAL_TAX_AMOUNT">
+      <Position>11</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="311" parent="28" name="INVOICE_PRICE">
+      <Position>12</Position>
+      <DataType>decimal(38,16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="312" parent="28" name="PRICE">
+      <Position>13</Position>
+      <DataType>decimal(38,16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="313" parent="28" name="TAX_AMOUNT">
+      <Position>14</Position>
+      <DataType>decimal(38,16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="314" parent="28" name="PRICE_TAX_TOTAL_AMT">
+      <Position>15</Position>
+      <DataType>decimal(38,16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="315" parent="28" name="DONE_APPLIED_PREPAY_LOAN_AMT">
+      <Position>16</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="316" parent="28" name="DONE_PAYMENT_AMOUNT">
+      <Position>17</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="317" parent="28" name="BILLING_BALANCE">
+      <Position>18</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="318" parent="28" name="PURCHASE_UNIT_ORG_CODE">
+      <Position>19</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="319" parent="28" name="PURCHASE_UNIT_ORG_NAME">
+      <Position>20</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="320" parent="28" name="PURCHASE_REL_COMP_SEG">
+      <Position>21</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="321" parent="28" name="SALER_UNIT">
+      <Position>22</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="322" parent="28" name="SALER_UNIT_ID">
+      <Position>23</Position>
+      <Comment>销货单位ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="323" parent="28" name="SALER_UNIT_CODE">
+      <Position>24</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="324" parent="28" name="PARTNER_INFO_ID">
+      <Position>25</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="325" parent="28" name="PARTNER_CODE">
+      <Position>26</Position>
+      <Comment>合作方编码</Comment>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="326" parent="28" name="PARTNER_NAME">
+      <Position>27</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;合作方名称&apos;</DefaultExpression>
+    </column>
+    <column id="327" parent="28" name="CON_SIGN_TRANSACTION_ORG_ID">
+      <Position>28</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="328" parent="28" name="CON_SIGN_TRANSACTION_ORG_NAME">
+      <Position>29</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="329" parent="28" name="IS_PAY_FOR_ANOTHER">
+      <Position>30</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="330" parent="28" name="PAYMENT_METHODS_ENUM_ID">
+      <Position>31</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="331" parent="28" name="PAY_FOR_ANOTHER_ORG_ID">
+      <Position>32</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="332" parent="28" name="PAY_FOR_ANOTHER_ORG_NAME">
+      <Position>33</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="333" parent="28" name="ACCOUNTING_BIZ_TYPE_ENUM_ID">
+      <Position>34</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="334" parent="28" name="SETTLE_PATTERN_ENUM_ID">
+      <Position>35</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="335" parent="28" name="PAYMENT_TRANS_ORG_ID">
+      <Position>36</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="336" parent="28" name="PAYMENT_TRANS_ORG_CODE">
+      <Position>37</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="337" parent="28" name="PAYMENT_TRANS_ORG_NAME">
+      <Position>38</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="338" parent="28" name="IS_SUPERSEDED_FLAG">
+      <Position>39</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="339" parent="28" name="CHARGE_TYPE_ENUM_ID">
+      <Position>40</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="340" parent="28" name="INVC_HANDLED_PERSON_NAME">
+      <Position>41</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="341" parent="28" name="INVC_HANDLED_PERSON_ID">
+      <Position>42</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="342" parent="28" name="VENDOR_SITE_CODE">
+      <Position>43</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="343" parent="28" name="VENDOR_SITE_ID">
+      <Position>44</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="344" parent="28" name="IS_LOCKED_FLAG">
+      <Position>45</Position>
+      <Comment>是否锁定</Comment>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="345" parent="28" name="TRANS_NUM">
+      <Position>46</Position>
+      <Comment>结算单编号</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="346" parent="28" name="EMS_TRANS_NUM">
+      <Position>47</Position>
+      <Comment>商城结算单编号</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="347" parent="28" name="TRANS_SOURCE">
+      <Position>48</Position>
+      <Comment>结算单来源</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="348" parent="28" name="PO_NUMBER">
+      <Position>49</Position>
+      <Comment>采购订单号</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="349" parent="28" name="BILLING_PAYMENT_RULE_CODE">
+      <Position>50</Position>
+      <Comment>开票及支付规则编号</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="350" parent="28" name="PAYMENT_RULE_CODE">
+      <Position>51</Position>
+      <Comment>支付规则编号</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="351" parent="28" name="ORDER_TRANSACTION_ORG_ID">
+      <Position>52</Position>
+      <Comment>订单所属组织ID</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="352" parent="28" name="ORDER_ORG_CODE">
+      <Position>53</Position>
+      <Comment>订单所属组织</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="353" parent="28" name="ORDER_ORG_NAME">
+      <Position>54</Position>
+      <Comment>订单所属组织名称</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="354" parent="28" name="SETTLE_ACC_CODE">
+      <Position>55</Position>
+      <Comment>结算单号</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="355" parent="28" name="SETTLE_ACC_TOTAL_AMT">
+      <Position>56</Position>
+      <Comment>结算单金额</Comment>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="356" parent="28" name="PAYMENT_STAGE_ENUM_ID">
+      <Position>57</Position>
+      <Comment>开票阶段</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="357" parent="28" name="PAYMENT_PHASE_SEQ">
+      <Position>58</Position>
+      <Comment>开票阶段序号</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="358" parent="28" name="BILLING_STATUS_ENUM_ID">
+      <Position>59</Position>
+      <Comment>开票状态</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="359" parent="28" name="ORDER_HEADER_ID">
+      <Position>60</Position>
+      <Comment>订单信息头ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="360" parent="28" name="CON_ITEM_ID">
+      <Position>61</Position>
+      <Comment>合同条款ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="361" parent="28" name="CREATED_BY">
+      <Position>62</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="362" parent="28" name="CREATION_DATE">
+      <Position>63</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="363" parent="28" name="LAST_UPDATED_BY">
+      <Position>64</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="364" parent="28" name="LAST_UPDATE_DATE">
+      <Position>65</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="365" parent="28" name="RECORD_VERSION">
+      <Position>66</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="366" parent="28" name="DELETED_FLAG">
+      <Position>67</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="367" parent="28" name="DELETED_BY">
+      <Position>68</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="368" parent="28" name="DELETION_DATE">
+      <Position>69</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="369" parent="28" name="SHARDING_ID">
+      <Position>70</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="370" parent="28" name="ATTRIBUTE1">
+      <Position>71</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="371" parent="28" name="ATTRIBUTE2">
+      <Position>72</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="372" parent="28" name="ATTRIBUTE3">
+      <Position>73</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="373" parent="28" name="ATTRIBUTE4">
+      <Position>74</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="374" parent="28" name="ATTRIBUTE5">
+      <Position>75</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="375" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>BILLING_GROUP_SUM_INFO_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="376" parent="29" name="PAYMENT_BATCH_INFO_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="377" parent="29" name="SETTLE_PATTERN_ENUM_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="378" parent="29" name="PAYMENT_ORG_ID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="379" parent="29" name="PAYMENT_ORG_NAME">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="380" parent="29" name="PAYMENT_BATCH_SEQ">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="381" parent="29" name="PAYMENT_BATCH_STAT_ENUM_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="382" parent="29" name="PAYMENT_TOTAL_AMOUNT">
+      <Position>7</Position>
+      <DataType>decimal(38,16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="383" parent="29" name="CHARGE_TYPE_ENUM_ID">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="384" parent="29" name="PROCESS_TEMPLATE_DEF_ID">
+      <Position>9</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="385" parent="29" name="REPAY_PROC_TPL_DEF_ID">
+      <Position>10</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="386" parent="29" name="CREATOR_NAME">
+      <Position>11</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="387" parent="29" name="CREATED_BY">
+      <Position>12</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="388" parent="29" name="CREATION_DATE">
+      <Position>13</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="389" parent="29" name="LAST_UPDATED_BY">
+      <Position>14</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="390" parent="29" name="LAST_UPDATE_DATE">
+      <Position>15</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="391" parent="29" name="RECORD_VERSION">
+      <Position>16</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="392" parent="29" name="DELETED_FLAG">
+      <Position>17</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="393" parent="29" name="DELETED_BY">
+      <Position>18</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="394" parent="29" name="DELETION_DATE">
+      <Position>19</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="395" parent="29" name="SHARDING_ID">
+      <Position>20</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="396" parent="29" name="ATTRIBUTE1">
+      <Position>21</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="397" parent="29" name="ATTRIBUTE2">
+      <Position>22</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="398" parent="29" name="ATTRIBUTE3">
+      <Position>23</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="399" parent="29" name="ATTRIBUTE4">
+      <Position>24</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="400" parent="29" name="ATTRIBUTE5">
+      <Position>25</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="401" parent="29" name="ATTRIBUTE6">
+      <Position>26</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="402" parent="29" name="ATTRIBUTE7">
+      <Position>27</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="403" parent="29" name="ATTRIBUTE8">
+      <Position>28</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="404" parent="29" name="ATTRIBUTE9">
+      <Position>29</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="405" parent="29" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PAYMENT_BATCH_INFO_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="406" parent="30" name="PAYMENT_BATCH_MAP_INFO_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="407" parent="30" name="PAYMENT_BATCH_INFO_ID">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="408" parent="30" name="PAYMENT_INFO_ID">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="409" parent="30" name="REMARK">
+      <Position>4</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="410" parent="30" name="CREATED_BY">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="411" parent="30" name="CREATION_DATE">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="412" parent="30" name="LAST_UPDATED_BY">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="413" parent="30" name="LAST_UPDATE_DATE">
+      <Position>8</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="414" parent="30" name="RECORD_VERSION">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="415" parent="30" name="DELETED_FLAG">
+      <Position>10</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="416" parent="30" name="DELETED_BY">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="417" parent="30" name="DELETION_DATE">
+      <Position>12</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="418" parent="30" name="SHARDING_ID">
+      <Position>13</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="419" parent="30" name="ATTRIBUTE1">
+      <Position>14</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="420" parent="30" name="ATTRIBUTE2">
+      <Position>15</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="421" parent="30" name="ATTRIBUTE3">
+      <Position>16</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="422" parent="30" name="ATTRIBUTE4">
+      <Position>17</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="423" parent="30" name="ATTRIBUTE5">
+      <Position>18</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="424" parent="30" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PAYMENT_BATCH_MAP_INFO_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="425" parent="31" name="PAYMENT_CODE_INFO_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="426" parent="31" name="RECEIPTES_TYPE_ENUM_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="427" parent="31" name="PAYMENT_ORG_CODE">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="428" parent="31" name="CODE_INFO">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="429" parent="31" name="MONTH_INFO">
+      <Position>5</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="430" parent="31" name="SHARDING_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="431" parent="31" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PAYMENT_CODE_INFO_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="432" parent="32" name="PAYMENT_COMMAND_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="433" parent="32" name="PAYMENT_INFO_ID">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="434" parent="32" name="PAYMENT_INFO_CODE">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="435" parent="32" name="PAYMENT_LIST_ID">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="436" parent="32" name="ACTUAL_PAYMENT_LIST_SEQ">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="437" parent="32" name="PAYMENT_TYPE_ENUM_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="438" parent="32" name="PAYMENT_TRANS_ORG_ID">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="439" parent="32" name="PAYMENT_TRANS_ORG_NAME">
+      <Position>8</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="440" parent="32" name="PAYMENT_STATUS_ENUM_ID">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="441" parent="32" name="PAYMENT_METHODS_ENUM_ID">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="442" parent="32" name="RECEIVED_PAYMENT_NAME">
+      <Position>11</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="443" parent="32" name="R_BANK_NAME">
+      <Position>12</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="444" parent="32" name="R_BANK_BRANCH_NAME">
+      <Position>13</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="445" parent="32" name="R_BANK_ACCOUNT_NAME">
+      <Position>14</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="446" parent="32" name="R_BANK_ACCOUNT_NO">
+      <Position>15</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="447" parent="32" name="THIS_PAID_OFF_AMOUNT">
+      <Position>16</Position>
+      <DataType>decimal(38,16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="448" parent="32" name="P_BANK_NAME">
+      <Position>17</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="449" parent="32" name="P_BANK_BRANCH_NAME">
+      <Position>18</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="450" parent="32" name="P_BANK_ACCOUNT_NAME">
+      <Position>19</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="451" parent="32" name="P_BANK_ACCOUNT_NO">
+      <Position>20</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="452" parent="32" name="PAYMENT_DATE">
+      <Position>21</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="453" parent="32" name="PAYMENT_DESC">
+      <Position>22</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="454" parent="32" name="PAYMENT_CURRENCY_ENUM_ID">
+      <Position>23</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="455" parent="32" name="PAYMENT_EXCHANGE_RATE">
+      <Position>24</Position>
+      <DataType>decimal(18,8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="456" parent="32" name="ORIGINAL_CURRENCY_AMOUNT">
+      <Position>25</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="457" parent="32" name="ACTUAL_PAID_OFF_DATE">
+      <Position>26</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="458" parent="32" name="PAY_RESULT">
+      <Position>27</Position>
+      <DataType>varchar(240)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="459" parent="32" name="PAY_FAILURE_ERR_REASON">
+      <Position>28</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="460" parent="32" name="RETURN_TICKET_FLAG">
+      <Position>29</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="461" parent="32" name="IS_AUTO_SAFETY_SLIP">
+      <Position>30</Position>
+      <DataType>varchar(1)|0</DataType>
+    </column>
+    <column id="462" parent="32" name="IS_COMMAND_CANCEL">
+      <Position>31</Position>
+      <DataType>varchar(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="463" parent="32" name="PAYMENT_COMMAND_STAT_ENUM_ID">
+      <Position>32</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="464" parent="32" name="PAYMENT_COMMAND_VERSION">
+      <Position>33</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="465" parent="32" name="IS_RETURN_TICKET_FLAG">
+      <Position>34</Position>
+      <DataType>tinyint(4)|0</DataType>
+    </column>
+    <column id="466" parent="32" name="REMARK">
+      <Position>35</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="467" parent="32" name="CREATED_BY">
+      <Position>36</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="468" parent="32" name="CREATION_DATE">
+      <Position>37</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="469" parent="32" name="LAST_UPDATED_BY">
+      <Position>38</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="470" parent="32" name="LAST_UPDATE_DATE">
+      <Position>39</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="471" parent="32" name="RECORD_VERSION">
+      <Position>40</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="472" parent="32" name="DELETED_FLAG">
+      <Position>41</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="473" parent="32" name="DELETED_BY">
+      <Position>42</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="474" parent="32" name="DELETION_DATE">
+      <Position>43</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="475" parent="32" name="SHARDING_ID">
+      <Position>44</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="476" parent="32" name="PAYMENT_COMMAND_IDX1">
+      <ColNames>PAYMENT_LIST_ID</ColNames>
+    </index>
+    <key id="477" parent="32" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PAYMENT_COMMAND_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="478" parent="33" name="PAYMENT_COMMAND_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="479" parent="33" name="BATCH_ID">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="480" parent="33" name="PAYMENT_ORG_CODE">
+      <Position>3</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="481" parent="33" name="CONTRACT_NUMBER">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="482" parent="33" name="HR_ORG_NAME">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="483" parent="33" name="ACCOUNT_NUMBER">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="484" parent="33" name="ACCOUNT_NAME">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="485" parent="33" name="EMPLOYEE_NAME">
+      <Position>8</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="486" parent="33" name="RECEIPT_TYPE">
+      <Position>9</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="487" parent="33" name="HR_CORP_CODE">
+      <Position>10</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="488" parent="33" name="BUSS_TYPE">
+      <Position>11</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="489" parent="33" name="VENDOR_TYPE">
+      <Position>12</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="490" parent="33" name="DEPT_CODE">
+      <Position>13</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="491" parent="33" name="RECEIPT_AMOUNT">
+      <Position>14</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="492" parent="33" name="ERP_VOUCHER_NUM">
+      <Position>15</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="493" parent="33" name="PAYEE_BANK_TYPE">
+      <Position>16</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="494" parent="33" name="INVOICE_NUMBER">
+      <Position>17</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="495" parent="33" name="PAYMENT_VOUCHER_SERIAL">
+      <Position>18</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="496" parent="33" name="PAYMENT_IDENFIFICATION">
+      <Position>19</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="497" parent="33" name="DUE_DATE">
+      <Position>20</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="498" parent="33" name="CHECKNO">
+      <Position>21</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="499" parent="33" name="IF_FOCUS_PAYMENT">
+      <Position>22</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="500" parent="33" name="LEDGER_DATE">
+      <Position>23</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="501" parent="33" name="REASON">
+      <Position>24</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="502" parent="33" name="DRAFTSMAN_TEL">
+      <Position>25</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="503" parent="33" name="PROVINCE_CODE">
+      <Position>26</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="504" parent="33" name="BUSS_PRI_KEY">
+      <Position>27</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="505" parent="33" name="BANK_TYPE">
+      <Position>28</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="506" parent="33" name="IF_DIRECT_PAYMENT">
+      <Position>29</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="507" parent="33" name="PAYMENT_TYPE">
+      <Position>30</Position>
+      <DataType>varchar(1)|0</DataType>
+    </column>
+    <column id="508" parent="33" name="WO_ALLOT_PAY_BATCH_DESC">
+      <Position>31</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="509" parent="33" name="WO_CHANNEL_VENDOR_CODE">
+      <Position>32</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="510" parent="33" name="WO_RECEIVED_PAYMENT_NAME">
+      <Position>33</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="511" parent="33" name="WO_PAYEE_BANK">
+      <Position>34</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="512" parent="33" name="WO_PAYEE">
+      <Position>35</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="513" parent="33" name="WO_BUSINESS_HALL">
+      <Position>36</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="514" parent="33" name="BUSINESS_HALL_AUDIT">
+      <Position>37</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="515" parent="33" name="ENTRY_ACCOUNT_AMOUNT">
+      <Position>38</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="516" parent="33" name="PROTOKARYON_ACCOUNTANT_NAME">
+      <Position>39</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="517" parent="33" name="INTERNATIONAL_BUSINESS">
+      <Position>40</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="518" parent="33" name="SYSTEM_SOURCE">
+      <Position>41</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="519" parent="33" name="SHARDING_ID">
+      <Position>42</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="520" parent="33" name="ATTRIBUTE1">
+      <Position>43</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="521" parent="33" name="ATTRIBUTE2">
+      <Position>44</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="522" parent="33" name="ATTRIBUTE3">
+      <Position>45</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="523" parent="33" name="ATTRIBUTE4">
+      <Position>46</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="524" parent="33" name="ATTRIBUTE5">
+      <Position>47</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="525" parent="33" name="ATTRIBUTE6">
+      <Position>48</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="526" parent="33" name="ATTRIBUTE7">
+      <Position>49</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="527" parent="33" name="ATTRIBUTE8">
+      <Position>50</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="528" parent="33" name="ATTRIBUTE9">
+      <Position>51</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="529" parent="33" name="ATTRIBUTE10">
+      <Position>52</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="530" parent="33" name="ATTRIBUTE11">
+      <Position>53</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="531" parent="33" name="ATTRIBUTE12">
+      <Position>54</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="532" parent="33" name="ATTRIBUTE13">
+      <Position>55</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="533" parent="33" name="ATTRIBUTE14">
+      <Position>56</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="534" parent="33" name="ATTRIBUTE15">
+      <Position>57</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="535" parent="33" name="ATTRIBUTE16">
+      <Position>58</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="536" parent="33" name="ATTRIBUTE17">
+      <Position>59</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="537" parent="33" name="ATTRIBUTE18">
+      <Position>60</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="538" parent="33" name="ATTRIBUTE19">
+      <Position>61</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="539" parent="33" name="ATTRIBUTE20">
+      <Position>62</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="540" parent="33" name="ATTRIBUTE21">
+      <Position>63</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="541" parent="33" name="ATTRIBUTE22">
+      <Position>64</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="542" parent="33" name="ATTRIBUTE23">
+      <Position>65</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="543" parent="33" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PAYMENT_COMMAND_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="544" parent="34" name="CON_PAY_AMT_INFO_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="545" parent="34" name="OBJECT_INFO_ID">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="546" parent="34" name="CON_SIGN_TRANSACTION_ORG_ID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="547" parent="34" name="APP_PAYMENT_AMT">
+      <Position>4</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="548" parent="34" name="APP_PREPAY_AMT">
+      <Position>5</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="549" parent="34" name="INFO_TYPE">
+      <Position>6</Position>
+      <DataType>varchar(1)|0</DataType>
+    </column>
+    <column id="550" parent="34" name="CREATED_BY">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="551" parent="34" name="CREATION_DATE">
+      <Position>8</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="552" parent="34" name="LAST_UPDATED_BY">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="553" parent="34" name="LAST_UPDATE_DATE">
+      <Position>10</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="554" parent="34" name="RECORD_VERSION">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="555" parent="34" name="DELETED_FLAG">
+      <Position>12</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="556" parent="34" name="DELETED_BY">
+      <Position>13</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="557" parent="34" name="DELETION_DATE">
+      <Position>14</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="558" parent="34" name="SHARDING_ID">
+      <Position>15</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="559" parent="34" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CON_PAY_AMT_INFO_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="560" parent="35" name="E_REC_INFO_ID">
+      <Position>1</Position>
+      <Comment>电子档案信息ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="561" parent="35" name="AGGREQATE_TYPE">
+      <Position>2</Position>
+      <Comment>汇总类型</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="562" parent="35" name="VOUCHER_CATEGORY_ENUM_ID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="563" parent="35" name="DOCUMENT_TYPE">
+      <Position>4</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="564" parent="35" name="DOCUMENT_INFO_ID">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="565" parent="35" name="DOCUMENT_NUMBER">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="566" parent="35" name="PACK_NAME_CODE">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="567" parent="35" name="ATTACHMENT_QUANTITY">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="568" parent="35" name="E_REC_STATUS_ENUM_ID">
+      <Position>9</Position>
+      <Comment>状态</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="569" parent="35" name="PUSH_TIME">
+      <Position>10</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="570" parent="35" name="AUDIT_TIME">
+      <Position>11</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="571" parent="35" name="PUSH_LOG_MSG">
+      <Position>12</Position>
+      <DataType>varchar(240)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="572" parent="35" name="AUDIT_LOG_MSG">
+      <Position>13</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="573" parent="35" name="XML_VERSION">
+      <Position>14</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="574" parent="35" name="XML_ROOT_ELEMENT">
+      <Position>15</Position>
+      <DataType>varchar(240)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="575" parent="35" name="PACKAGE_DESC">
+      <Position>16</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="576" parent="35" name="PACKAGE_FORMAT">
+      <Position>17</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="577" parent="35" name="PACKAGE_NAME">
+      <Position>18</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="578" parent="35" name="ORIGINAL_SYSTEM_NAME">
+      <Position>19</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="579" parent="35" name="ORIGINAL_ARCHIVE_ID">
+      <Position>20</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="580" parent="35" name="PACKAGE_LEVEL_1">
+      <Position>21</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="581" parent="35" name="ERP_VOUCHER_CODE">
+      <Position>22</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="582" parent="35" name="PACKAGE_LEVEL_2">
+      <Position>23</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="583" parent="35" name="FILE_SIZE">
+      <Position>24</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="584" parent="35" name="FILE_CREATED_TIME">
+      <Position>25</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="585" parent="35" name="FILE_CHECK_SUM">
+      <Position>26</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="586" parent="35" name="FILE_FORMAT">
+      <Position>27</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="587" parent="35" name="SHARDING_ID">
+      <Position>28</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="588" parent="35" name="ATTRIBUTE1">
+      <Position>29</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="589" parent="35" name="ATTRIBUTE2">
+      <Position>30</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="590" parent="35" name="ATTRIBUTE3">
+      <Position>31</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="591" parent="35" name="ATTRIBUTE4">
+      <Position>32</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="592" parent="35" name="ATTRIBUTE5">
+      <Position>33</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="593" parent="35" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>E_REC_INFO_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="594" parent="36" name="IMP_AP_PAY_HEAD_ID">
+      <Position>1</Position>
+      <Comment>导入应付付款头信息ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="595" parent="36" name="PRI_KEY">
+      <Position>2</Position>
+      <Comment>记录唯一关键字</Comment>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="596" parent="36" name="PROVINCE_CODE">
+      <Position>3</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="597" parent="36" name="BATCH_ID">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="598" parent="36" name="HEADER_ID">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="599" parent="36" name="IMPORT_ID">
+      <Position>6</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="600" parent="36" name="ORG_ID">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="601" parent="36" name="PRV_ORG_ID">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="602" parent="36" name="BANK_ACCOUNT_NAME">
+      <Position>9</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="603" parent="36" name="BANK_ACCOUNT_NUM">
+      <Position>10</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="604" parent="36" name="BANK_ACCOUNT_ID">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="605" parent="36" name="VENDOR_ID">
+      <Position>12</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="606" parent="36" name="VENDOR_NUMBER">
+      <Position>13</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="607" parent="36" name="VENDOR_NAME">
+      <Position>14</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="608" parent="36" name="VENDOR_SITE_ID">
+      <Position>15</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="609" parent="36" name="VENDOR_SITE_CODE">
+      <Position>16</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="610" parent="36" name="CHECK_DATE">
+      <Position>17</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="611" parent="36" name="CHECK_AMOUNT">
+      <Position>18</Position>
+      <DataType>decimal(38,16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="612" parent="36" name="CURRENCY_CODE">
+      <Position>19</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="613" parent="36" name="EXCHANGE_DATE">
+      <Position>20</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="614" parent="36" name="EXCHANGE_RATE">
+      <Position>21</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="615" parent="36" name="EXCHANGE_RATE_TYPE">
+      <Position>22</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="616" parent="36" name="PAYMENT_METHOD_CODE">
+      <Position>23</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="617" parent="36" name="PAYMENT_TYPE_FLAG">
+      <Position>24</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="618" parent="36" name="PAYMENT_DOCUMENT_ID">
+      <Position>25</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="619" parent="36" name="PAYMENT_PROFILE_ID">
+      <Position>26</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="620" parent="36" name="DESCRIPTION">
+      <Position>27</Position>
+      <Comment>付款摘要</Comment>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="621" parent="36" name="FUTURE_PAY_DUE_DATE">
+      <Position>28</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="622" parent="36" name="MATURITY_EXCHANGE_RATE_TYPE">
+      <Position>29</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="623" parent="36" name="MATURITY_EXCHANGE_RATE">
+      <Position>30</Position>
+      <DataType>decimal(18,8)|0</DataType>
+    </column>
+    <column id="624" parent="36" name="EMPLOYEE_NUMBER">
+      <Position>31</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="625" parent="36" name="CHECK_NO">
+      <Position>32</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="626" parent="36" name="ACCESSORIES_SHEETS">
+      <Position>33</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="627" parent="36" name="SR_NUMBER">
+      <Position>34</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="628" parent="36" name="SMS_RECEIPT_NUMBER">
+      <Position>35</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="629" parent="36" name="ERP_VOUCHAER_NUM">
+      <Position>36</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="630" parent="36" name="ACCOUNTING_STATUS_ENUM_ID">
+      <Position>37</Position>
+      <DataType>int(20)|0</DataType>
+    </column>
+    <column id="631" parent="36" name="VOUCHER_CATEGORY_ENUM_ID">
+      <Position>38</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="632" parent="36" name="ACCOUNTING_ACC_BOOK">
+      <Position>39</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="633" parent="36" name="DOCUMENT_INFO_ID">
+      <Position>40</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="634" parent="36" name="RESERVED_1">
+      <Position>41</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="635" parent="36" name="RESERVED_2">
+      <Position>42</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="636" parent="36" name="RESERVED_3">
+      <Position>43</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="637" parent="36" name="RESERVED_4">
+      <Position>44</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="638" parent="36" name="RESERVED_5">
+      <Position>45</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="639" parent="36" name="RESERVED_6">
+      <Position>46</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="640" parent="36" name="RESERVED_7">
+      <Position>47</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="641" parent="36" name="RESERVED_8">
+      <Position>48</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="642" parent="36" name="AUDIT_NUMBER">
+      <Position>49</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="643" parent="36" name="GEN_INTERFACE_STAT_ENUM_ID">
+      <Position>50</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="644" parent="36" name="SUMMARY_VOUCHER_HEAD_ID">
+      <Position>51</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="645" parent="36" name="ORG_NAME">
+      <Position>52</Position>
+      <Comment>OU名称</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="646" parent="36" name="SHARDING_ID">
+      <Position>53</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="647" parent="36" name="CREATION_DATE">
+      <Position>54</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="648" parent="36" name="LAST_UPDATE_DATE">
+      <Position>55</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="649" parent="36" name="IMP_ERP_DATE">
+      <Position>56</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="650" parent="36" name="WB_SERVICE_MESSAGE">
+      <Position>57</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <index id="651" parent="36" name="PAYMENT_IMP_AP_PAY_HEAD_IDX1">
+      <ColNames>DOCUMENT_INFO_ID</ColNames>
+    </index>
+    <index id="652" parent="36" name="PAYMENT_IMP_AP_PAY_HEAD_IDX2">
+      <ColNames>GEN_INTERFACE_STAT_ENUM_ID</ColNames>
+    </index>
+    <key id="653" parent="36" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>IMP_AP_PAY_HEAD_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="654" parent="37" name="IMP_AP_PAY_LINE_ID">
+      <Position>1</Position>
+      <Comment>导入应付付款行ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="655" parent="37" name="PRI_KEY">
+      <Position>2</Position>
+      <Comment>记录唯一关键字</Comment>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="656" parent="37" name="BATCH_ID">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="657" parent="37" name="HEADER_ID">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="658" parent="37" name="DETAIL_ID">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="659" parent="37" name="IMPORT_ID">
+      <Position>6</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="660" parent="37" name="INVOICE_NUMBER">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="661" parent="37" name="PAYMENT_AMOUNT">
+      <Position>8</Position>
+      <DataType>decimal(18,8)|0</DataType>
+    </column>
+    <column id="662" parent="37" name="AMOUNT_REMAINING">
+      <Position>9</Position>
+      <DataType>decimal(18,8)|0</DataType>
+    </column>
+    <column id="663" parent="37" name="RESERVED_1">
+      <Position>10</Position>
+      <DataType>decimal(18,8)|0</DataType>
+    </column>
+    <column id="664" parent="37" name="RESERVED_2">
+      <Position>11</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="665" parent="37" name="RESERVED_3">
+      <Position>12</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="666" parent="37" name="RESERVED_4">
+      <Position>13</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="667" parent="37" name="RESERVED_5">
+      <Position>14</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="668" parent="37" name="RESERVED_6">
+      <Position>15</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="669" parent="37" name="RESERVED_7">
+      <Position>16</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="670" parent="37" name="RESERVED_8">
+      <Position>17</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="671" parent="37" name="IMP_PROCESSED_FLAG">
+      <Position>18</Position>
+      <DataType>varchar(1)|0</DataType>
+    </column>
+    <column id="672" parent="37" name="SUMMARY_VOUCHER_HEAD_ID">
+      <Position>19</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="673" parent="37" name="SHARDING_ID">
+      <Position>20</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="674" parent="37" name="PAYMENT_IMP_AP_PAY_LINE_IDX1">
+      <ColNames>SUMMARY_VOUCHER_HEAD_ID</ColNames>
+    </index>
+    <key id="675" parent="37" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>IMP_AP_PAY_LINE_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="676" parent="38" name="PAYMENT_INFO_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="677" parent="38" name="PAYMENT_INFO_CODE">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="678" parent="38" name="PAYMENT_ORG_ID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="679" parent="38" name="PAYMENT_ORG_CODE">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="680" parent="38" name="PAYMENT_ORG_NAME">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="681" parent="38" name="PAYMENT_TYPE_ENUM_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="682" parent="38" name="PAYMENT_DATE">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="683" parent="38" name="PAYMENT_AMOUNT">
+      <Position>8</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="684" parent="38" name="PAYMENT_STATUS_ENUM_ID">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="685" parent="38" name="PARTNER_INFO_ID">
+      <Position>10</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="686" parent="38" name="PARTNER_CODE">
+      <Position>11</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="687" parent="38" name="PARTNER_NAME">
+      <Position>12</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="688" parent="38" name="PURCHASE_REL_COMP_SEG">
+      <Position>13</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="689" parent="38" name="CONTRACT_INFO_ID">
+      <Position>14</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="690" parent="38" name="CONTRACT_NUM">
+      <Position>15</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="691" parent="38" name="CONTRACT_NAME">
+      <Position>16</Position>
+      <DataType>varchar(240)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="692" parent="38" name="PAYMENT_METHODS_ENUM_ID">
+      <Position>17</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="693" parent="38" name="BILL_DUE_DATE">
+      <Position>18</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="694" parent="38" name="SETTLE_PATTERN_ENUM_ID">
+      <Position>19</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="695" parent="38" name="UNICOM_BANK_INFO_ID">
+      <Position>20</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="696" parent="38" name="PAYMENT_BANK_NAME">
+      <Position>21</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="697" parent="38" name="PAYMENT_BANK_BRANCH_NAME">
+      <Position>22</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="698" parent="38" name="PAYMENT_BANK_ACCOUNT_NAME">
+      <Position>23</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="699" parent="38" name="PAYMENT_BANK_ACCOUNT_NO">
+      <Position>24</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="700" parent="38" name="PAYMENT_DESC">
+      <Position>25</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="701" parent="38" name="ACCOUNTING_STATUS_ENUM_ID">
+      <Position>26</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="702" parent="38" name="PAYMENT_CURRENCY_ENUM_ID">
+      <Position>27</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="703" parent="38" name="PAYMENT_EXCHANGE_RATE">
+      <Position>28</Position>
+      <DataType>decimal(18,8)|0</DataType>
+    </column>
+    <column id="704" parent="38" name="ORIGINAL_CURRENCY_AMOUNT">
+      <Position>29</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="705" parent="38" name="ACCOUNTING_BIZ_TYPE_ENUM_ID">
+      <Position>30</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="706" parent="38" name="IS_PAY_FOR_ANOTHER">
+      <Position>31</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="707" parent="38" name="HANDLED_PERSON_ID">
+      <Position>32</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="708" parent="38" name="HANDLED_PERSON_NAME">
+      <Position>33</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="709" parent="38" name="FINANCIAL_CHECKER_ID">
+      <Position>34</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="710" parent="38" name="FINANCIAL_CHECKER_NAME">
+      <Position>35</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="711" parent="38" name="CHARGE_TYPE_ENUM_ID">
+      <Position>36</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="712" parent="38" name="PROCESS_TEMPLATE_DEF_ID">
+      <Position>37</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="713" parent="38" name="REPAY_PROC_TPL_DEF_ID">
+      <Position>38</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="714" parent="38" name="REVERSED_TIME">
+      <Position>39</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="715" parent="38" name="VENDOR_SITE_ID">
+      <Position>40</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="716" parent="38" name="VENDOR_SITE_CODE">
+      <Position>41</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="717" parent="38" name="TRANS_NUM">
+      <Position>42</Position>
+      <Comment>结算单编号</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="718" parent="38" name="EMS_TRANS_NUM">
+      <Position>43</Position>
+      <Comment>商城结算单编号</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="719" parent="38" name="TRANS_SOURCE">
+      <Position>44</Position>
+      <Comment>结算单来源</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="720" parent="38" name="PAYMENT_DOCUMENT_ID">
+      <Position>45</Position>
+      <Comment>付款单据ID</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="721" parent="38" name="PAYMENT_DOCUMENT_NAME">
+      <Position>46</Position>
+      <Comment>付款单据</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="722" parent="38" name="PAYMENT_PROFILE_ID">
+      <Position>47</Position>
+      <Comment>付款配置文件ID</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="723" parent="38" name="PAYMENT_PROFILE_NAME">
+      <Position>48</Position>
+      <Comment>付款配置文件名</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="724" parent="38" name="BILLING_PAYMENT_RULE_CODE">
+      <Position>49</Position>
+      <Comment>开票及支付规则编号</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="725" parent="38" name="PAYMENT_RULE_CODE">
+      <Position>50</Position>
+      <Comment>支付规则编号</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="726" parent="38" name="SETTLE_ACC_CODE">
+      <Position>51</Position>
+      <Comment>结算单号</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="727" parent="38" name="SETTLE_ACC_TOTAL_AMT">
+      <Position>52</Position>
+      <Comment>结算单金额</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="728" parent="38" name="REMARK">
+      <Position>53</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="729" parent="38" name="CREATED_BY">
+      <Position>54</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="730" parent="38" name="CREATION_DATE">
+      <Position>55</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="731" parent="38" name="LAST_UPDATED_BY">
+      <Position>56</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="732" parent="38" name="LAST_UPDATE_DATE">
+      <Position>57</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="733" parent="38" name="RECORD_VERSION">
+      <Position>58</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="734" parent="38" name="DELETED_FLAG">
+      <Position>59</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="735" parent="38" name="DELETED_BY">
+      <Position>60</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="736" parent="38" name="DELETION_DATE">
+      <Position>61</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="737" parent="38" name="SHARDING_ID">
+      <Position>62</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="738" parent="38" name="ATTRIBUTE1">
+      <Position>63</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="739" parent="38" name="ATTRIBUTE2">
+      <Position>64</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="740" parent="38" name="ATTRIBUTE3">
+      <Position>65</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="741" parent="38" name="ATTRIBUTE4">
+      <Position>66</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="742" parent="38" name="ATTRIBUTE5">
+      <Position>67</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <index id="743" parent="38" name="T_SAC_PAYMENT_INFO_AK">
+      <ColNames>PAYMENT_INFO_CODE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="744" parent="38" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PAYMENT_INFO_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="745" parent="38" name="T_SAC_PAYMENT_INFO_AK">
+      <ColNames>PAYMENT_INFO_CODE</ColNames>
+      <UnderlyingIndexName>T_SAC_PAYMENT_INFO_AK</UnderlyingIndexName>
+    </key>
+    <column id="746" parent="39" name="INFO_LOCKED_REC_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="747" parent="39" name="INFO_TYPE">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="748" parent="39" name="INFO_ID">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="749" parent="39" name="INFO_CODE">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="750" parent="39" name="IS_LOCKED_FLAG">
+      <Position>5</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="751" parent="39" name="INFO_DESC">
+      <Position>6</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="752" parent="39" name="LOCKED_TIME">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="753" parent="39" name="UNLOCKED_TIME">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="754" parent="39" name="INFO_EXECUTOR_ID">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="755" parent="39" name="INFO_EXECUTOR_NAME">
+      <Position>10</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="756" parent="39" name="REMARK">
+      <Position>11</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="757" parent="39" name="CREATED_BY">
+      <Position>12</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="758" parent="39" name="CREATION_DATE">
+      <Position>13</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="759" parent="39" name="LAST_UPDATED_BY">
+      <Position>14</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="760" parent="39" name="LAST_UPDATE_DATE">
+      <Position>15</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="761" parent="39" name="RECORD_VERSION">
+      <Position>16</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="762" parent="39" name="DELETED_FLAG">
+      <Position>17</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="763" parent="39" name="DELETED_BY">
+      <Position>18</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="764" parent="39" name="DELETION_DATE">
+      <Position>19</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="765" parent="39" name="SHARDING_ID">
+      <Position>20</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="766" parent="39" name="ATTRIBUTE1">
+      <Position>21</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="767" parent="39" name="ATTRIBUTE2">
+      <Position>22</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="768" parent="39" name="ATTRIBUTE3">
+      <Position>23</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="769" parent="39" name="ATTRIBUTE4">
+      <Position>24</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="770" parent="39" name="ATTRIBUTE5">
+      <Position>25</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="771" parent="39" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>INFO_LOCKED_REC_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="772" parent="40" name="PAYMENT_LIST_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="773" parent="40" name="PAYMENT_INFO_ID">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="774" parent="40" name="LIST_SEQ">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="775" parent="40" name="PARTNER_INFO_ID">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="776" parent="40" name="RECEIVABLES_ACCOUNT_NAME">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="777" parent="40" name="RECEIVABLES_ACCOUNT_CODE">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="778" parent="40" name="PAYMENT_TYPE_ENUM_ID">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="779" parent="40" name="PARTNER_PAY_B_A_INFO_ID">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="780" parent="40" name="RECEIVABLE_BANK_OF_DEPOSIT">
+      <Position>9</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="781" parent="40" name="RECEIVABLE_ACCOUNT_NO">
+      <Position>10</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="782" parent="40" name="THIS_PAID_OFF_AMOUNT">
+      <Position>11</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="783" parent="40" name="ORIGINAL_CURRENCY_AMOUNT">
+      <Position>12</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="784" parent="40" name="PAYMENT_DATE">
+      <Position>13</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="785" parent="40" name="PAYMENT_DESC">
+      <Position>14</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="786" parent="40" name="ATTACHMENT_SHEETS">
+      <Position>15</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="787" parent="40" name="PAYMENT_LIST_STAT_ENUM_ID">
+      <Position>16</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="788" parent="40" name="ACCOUNTING_STATUS_ENUM_ID">
+      <Position>17</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="789" parent="40" name="ERP_VOUCHAER_NUM">
+      <Position>18</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="790" parent="40" name="IS_FROZEN_FLAG">
+      <Position>19</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="791" parent="40" name="REVERSED_TIME">
+      <Position>20</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="792" parent="40" name="ERP_PUSH_ERROR_MSG">
+      <Position>21</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="793" parent="40" name="AGG_PUSH_STATUS_FLAG">
+      <Position>22</Position>
+      <DataType>varchar(1)|0</DataType>
+    </column>
+    <column id="794" parent="40" name="AGG_PUSH_ERROR_MSG">
+      <Position>23</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="795" parent="40" name="PAY_CMD_CTRL_STAT_ENUM_ID">
+      <Position>24</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="796" parent="40" name="IS_RETURN_TICKET_FLAG">
+      <Position>25</Position>
+      <DataType>tinyint(4)|0</DataType>
+    </column>
+    <column id="797" parent="40" name="ORIGINAL_PAYMENT_INFO_ID">
+      <Position>26</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="798" parent="40" name="ORIGINAL_LIST_SEQ">
+      <Position>27</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="799" parent="40" name="ENTRY_ACCOUNTANT_ID">
+      <Position>28</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="800" parent="40" name="ENTRY_ACCOUNTANT_NAME">
+      <Position>29</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="801" parent="40" name="REVERSED_VOUCHER_NUM">
+      <Position>30</Position>
+      <Comment>红冲凭证号</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="802" parent="40" name="ERP_PUSH_STATUS_FLAG">
+      <Position>31</Position>
+      <DataType>varchar(1)|0</DataType>
+    </column>
+    <column id="803" parent="40" name="REMARK">
+      <Position>32</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="804" parent="40" name="GENERAL_LEDGER_DATE">
+      <Position>33</Position>
+      <Comment>总账日期</Comment>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="805" parent="40" name="CREATED_BY">
+      <Position>34</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="806" parent="40" name="CREATION_DATE">
+      <Position>35</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="807" parent="40" name="LAST_UPDATED_BY">
+      <Position>36</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="808" parent="40" name="LAST_UPDATE_DATE">
+      <Position>37</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="809" parent="40" name="RECORD_VERSION">
+      <Position>38</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="810" parent="40" name="DELETED_FLAG">
+      <Position>39</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="811" parent="40" name="DELETED_BY">
+      <Position>40</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="812" parent="40" name="DELETION_DATE">
+      <Position>41</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="813" parent="40" name="SHARDING_ID">
+      <Position>42</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="814" parent="40" name="ATTRIBUTE1">
+      <Position>43</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="815" parent="40" name="ATTRIBUTE2">
+      <Position>44</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="816" parent="40" name="ATTRIBUTE3">
+      <Position>45</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="817" parent="40" name="ATTRIBUTE4">
+      <Position>46</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="818" parent="40" name="ATTRIBUTE5">
+      <Position>47</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="819" parent="40" name="ATTRIBUTE6">
+      <Position>48</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="820" parent="40" name="ATTRIBUTE7">
+      <Position>49</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="821" parent="40" name="ATTRIBUTE8">
+      <Position>50</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="822" parent="40" name="ATTRIBUTE9">
+      <Position>51</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="823" parent="40" name="ATTRIBUTE10">
+      <Position>52</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="824" parent="40" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PAYMENT_LIST_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="825" parent="41" name="PREPAY_APP_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="826" parent="41" name="PREPAY_APP_CODE">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="827" parent="41" name="PAYMENT_ORG_ID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="828" parent="41" name="PAYMENT_ORG_CODE">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="829" parent="41" name="PAYMENT_ORG_NAME">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="830" parent="41" name="CONTRACT_INFO_ID">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="831" parent="41" name="CON_SIGN_TRANSACTION_ORG_ID">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="832" parent="41" name="CON_SIGN_TRANSACTION_ORG_CODE">
+      <Position>8</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="833" parent="41" name="CON_SIGN_TRANSACTION_ORG_NAME">
+      <Position>9</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="834" parent="41" name="CONTRACT_NUM">
+      <Position>10</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="835" parent="41" name="CONTRACT_NAME">
+      <Position>11</Position>
+      <DataType>varchar(240)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="836" parent="41" name="IS_FIXED_AMOUNT">
+      <Position>12</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="837" parent="41" name="CONTRACT_AMOUNT">
+      <Position>13</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="838" parent="41" name="PARTNER_INFO_ID">
+      <Position>14</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="839" parent="41" name="PARTNER_CODE">
+      <Position>15</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="840" parent="41" name="PARTNER_NAME">
+      <Position>16</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="841" parent="41" name="PREPAY_APP_PRI_TAX_TOT_AMT">
+      <Position>17</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="842" parent="41" name="PREPAY_APP_PRI_FUN_TOT_AMT">
+      <Position>18</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="843" parent="41" name="ORIGINAL_CURRENCY_AMOUNT">
+      <Position>19</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="844" parent="41" name="CURRENCY_ENUM_ID">
+      <Position>20</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="845" parent="41" name="EXCHANGE_RATE_ENUM_ID">
+      <Position>21</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="846" parent="41" name="PAYMENT_METHODS_ENUM_ID">
+      <Position>22</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="847" parent="41" name="UNICOM_BANK_INFO_ID">
+      <Position>23</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="848" parent="41" name="PAYMENT_BANK_NAME">
+      <Position>24</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="849" parent="41" name="PAYMENT_BANK_BRANCH_NAME">
+      <Position>25</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="850" parent="41" name="PAYMENT_BANK_ACCOUNT_NAME">
+      <Position>26</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="851" parent="41" name="PAYMENT_BANK_ACCOUNT_NO">
+      <Position>27</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="852" parent="41" name="EXPIRED_DATE">
+      <Position>28</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="853" parent="41" name="PREPAY_PAYMENT_AMOUNT">
+      <Position>29</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="854" parent="41" name="PREPAY_LOAN_APPLIED_AMOUNT">
+      <Position>30</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="855" parent="41" name="PREPAY_LOAN_APPLIED_BALANCE">
+      <Position>31</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="856" parent="41" name="PREPAY_APP_STATUS_ENUM_ID">
+      <Position>32</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="857" parent="41" name="IS_BILLING_FLAG">
+      <Position>33</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="858" parent="41" name="TAX_RATE">
+      <Position>34</Position>
+      <DataType>decimal(18,8)|0</DataType>
+    </column>
+    <column id="859" parent="41" name="TAX_AMOUNT">
+      <Position>35</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="860" parent="41" name="ACCOUNTING_BIZ_TYPE_ENUM_ID">
+      <Position>36</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="861" parent="41" name="BILLING_PRICE">
+      <Position>37</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="862" parent="41" name="BILLING_TAX_AMOUNT">
+      <Position>38</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="863" parent="41" name="DONE_BILLING_P_T_TOTAL_AMT">
+      <Position>39</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="864" parent="41" name="PURCHASE_UNIT_ORG_ID">
+      <Position>40</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="865" parent="41" name="PURCHASE_UNIT_ORG_CODE">
+      <Position>41</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="866" parent="41" name="PURCHASE_UNIT_ORG_NAME">
+      <Position>42</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="867" parent="41" name="SALER_UNIT_ID">
+      <Position>43</Position>
+      <Comment>销货单位ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="868" parent="41" name="SALER_UNIT_CODE">
+      <Position>44</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="869" parent="41" name="SALER_UNIT_NAME">
+      <Position>45</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="870" parent="41" name="BILLING_INFO_ID">
+      <Position>46</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="871" parent="41" name="BILLING_CODE">
+      <Position>47</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="872" parent="41" name="PREPAYMENT_DESC">
+      <Position>48</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="873" parent="41" name="SETTLE_PATTERN_ENUM_ID">
+      <Position>49</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="874" parent="41" name="IS_PAY_FOR_ANOTHER">
+      <Position>50</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="875" parent="41" name="PAY_FOR_ANOTHER_ORG_ID">
+      <Position>51</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="876" parent="41" name="PAY_FOR_ANOTHER_ORG_CODE">
+      <Position>52</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="877" parent="41" name="PAY_FOR_ANOTHER_ORG_NAME">
+      <Position>53</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="878" parent="41" name="PURCHASE_REL_COMP_SEG">
+      <Position>54</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="879" parent="41" name="CHARGE_TYPE_ENUM_ID">
+      <Position>55</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="880" parent="41" name="PROCESS_TEMPLATE_DEF_ID">
+      <Position>56</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="881" parent="41" name="CREATED_BY">
+      <Position>57</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="882" parent="41" name="CREATION_DATE">
+      <Position>58</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="883" parent="41" name="LAST_UPDATED_BY">
+      <Position>59</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="884" parent="41" name="LAST_UPDATE_DATE">
+      <Position>60</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="885" parent="41" name="RECORD_VERSION">
+      <Position>61</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="886" parent="41" name="DELETED_FLAG">
+      <Position>62</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="887" parent="41" name="DELETED_BY">
+      <Position>63</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="888" parent="41" name="DELETION_DATE">
+      <Position>64</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="889" parent="41" name="SHARDING_ID">
+      <Position>65</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="890" parent="41" name="ATTRIBUTE1">
+      <Position>66</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="891" parent="41" name="ATTRIBUTE2">
+      <Position>67</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="892" parent="41" name="ATTRIBUTE3">
+      <Position>68</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="893" parent="41" name="ATTRIBUTE4">
+      <Position>69</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="894" parent="41" name="ATTRIBUTE5">
+      <Position>70</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <index id="895" parent="41" name="T_SAC_SETTLE_PREPAYMENT_INFO_A">
+      <ColNames>PREPAY_APP_CODE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="896" parent="41" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PREPAY_APP_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="897" parent="41" name="T_SAC_SETTLE_PREPAYMENT_INFO_A">
+      <ColNames>PREPAY_APP_CODE</ColNames>
+      <UnderlyingIndexName>T_SAC_SETTLE_PREPAYMENT_INFO_A</UnderlyingIndexName>
+    </key>
+    <column id="898" parent="42" name="PREPAY_CON_ITEM_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="899" parent="42" name="PREPAY_APP_ID">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="900" parent="42" name="CONTRACT_INFO_ID">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="901" parent="42" name="CONTRACT_NUM">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="902" parent="42" name="CONTRACT_NAME">
+      <Position>5</Position>
+      <DataType>varchar(240)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="903" parent="42" name="PROJECT_INFO_ID">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="904" parent="42" name="PROJECT_NAME">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="905" parent="42" name="PROJECT_NUM">
+      <Position>8</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="906" parent="42" name="PAYMENT_STAGE_ENUM_ID">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="907" parent="42" name="PAYMENT_PERCENT">
+      <Position>10</Position>
+      <DataType>decimal(18,8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="908" parent="42" name="PAYMENT_AMOUNT">
+      <Position>11</Position>
+      <DataType>decimal(18,8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="909" parent="42" name="PLAN_PAY_DATE">
+      <Position>12</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="910" parent="42" name="PAYMENT_DESC">
+      <Position>13</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="911" parent="42" name="PRJ_APPLIED_AMT">
+      <Position>14</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="912" parent="42" name="PRJ_APPLIED_BALANCE">
+      <Position>15</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="913" parent="42" name="CON_ITEM_ID">
+      <Position>16</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="914" parent="42" name="CON_ITMELINE_NUM">
+      <Position>17</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="915" parent="42" name="PAYMENT_LIST_ID">
+      <Position>18</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="916" parent="42" name="LIST_SEQ">
+      <Position>19</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="917" parent="42" name="CREATED_BY">
+      <Position>20</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="918" parent="42" name="CREATION_DATE">
+      <Position>21</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="919" parent="42" name="LAST_UPDATED_BY">
+      <Position>22</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="920" parent="42" name="LAST_UPDATE_DATE">
+      <Position>23</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="921" parent="42" name="RECORD_VERSION">
+      <Position>24</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="922" parent="42" name="DELETED_FLAG">
+      <Position>25</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="923" parent="42" name="DELETED_BY">
+      <Position>26</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="924" parent="42" name="DELETION_DATE">
+      <Position>27</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="925" parent="42" name="SHARDING_ID">
+      <Position>28</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="926" parent="42" name="ATTRIBUTE1">
+      <Position>29</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="927" parent="42" name="ATTRIBUTE2">
+      <Position>30</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="928" parent="42" name="ATTRIBUTE3">
+      <Position>31</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="929" parent="42" name="ATTRIBUTE4">
+      <Position>32</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="930" parent="42" name="ATTRIBUTE5">
+      <Position>33</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="931" parent="42" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PREPAY_CON_ITEM_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="932" parent="43" name="RB_OPT_APP_REC_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="933" parent="43" name="RECEIPTES_TYPE_ENUM_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="934" parent="43" name="PAYMENT_ORG_ID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="935" parent="43" name="PAYMENT_ORG_CODE">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="936" parent="43" name="RECEIPTS_ID">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="937" parent="43" name="RECEIPTS_CODE">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="938" parent="43" name="ROLLBACK_DESC">
+      <Position>7</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="939" parent="43" name="PROCESS_TEMPLATE_DEF_ID">
+      <Position>8</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="940" parent="43" name="ROLLBACK_OPT_VERSION">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="941" parent="43" name="ROLLBACK_APP_STAT_ENUM_ID">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="942" parent="43" name="REMARK">
+      <Position>11</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="943" parent="43" name="CREATED_BY">
+      <Position>12</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="944" parent="43" name="CREATION_DATE">
+      <Position>13</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="945" parent="43" name="LAST_UPDATED_BY">
+      <Position>14</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="946" parent="43" name="LAST_UPDATE_DATE">
+      <Position>15</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="947" parent="43" name="RECORD_VERSION">
+      <Position>16</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="948" parent="43" name="DELETED_FLAG">
+      <Position>17</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="949" parent="43" name="DELETED_BY">
+      <Position>18</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="950" parent="43" name="DELETION_DATE">
+      <Position>19</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="951" parent="43" name="SHARDING_ID">
+      <Position>20</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="952" parent="43" name="ATTRIBUTE1">
+      <Position>21</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="953" parent="43" name="ATTRIBUTE2">
+      <Position>22</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="954" parent="43" name="ATTRIBUTE3">
+      <Position>23</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="955" parent="43" name="ATTRIBUTE4">
+      <Position>24</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="956" parent="43" name="ATTRIBUTE5">
+      <Position>25</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="957" parent="43" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>RB_OPT_APP_REC_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="958" parent="44" name="REAPPROVED_REC_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="959" parent="44" name="PAYMENT_INFO_ID">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="960" parent="44" name="PAYMENT_INFO_CODE">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="961" parent="44" name="PAYMENT_LIST_ID">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="962" parent="44" name="PAYMENT_ORG_ID">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="963" parent="44" name="PAYMENT_ORG_CODE">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="964" parent="44" name="REPAY_STATUS_ENUM_ID">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="965" parent="44" name="PAYMENT_STATUS_ENUM_ID">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="966" parent="44" name="PROCESS_TEMPLATE_DEF_ID">
+      <Position>9</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="967" parent="44" name="REAPPROVED_VERSION_NO">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="968" parent="44" name="PROCESSED_DESC">
+      <Position>11</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="969" parent="44" name="ORIGINAL_PAYMENT_LIST_ID">
+      <Position>12</Position>
+      <Comment>原清单id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="970" parent="44" name="IS_RETURN_TICKET_FLAG">
+      <Position>13</Position>
+      <Comment>是否退票</Comment>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="971" parent="44" name="CREATED_BY">
+      <Position>14</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="972" parent="44" name="CREATION_DATE">
+      <Position>15</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="973" parent="44" name="LAST_UPDATED_BY">
+      <Position>16</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="974" parent="44" name="LAST_UPDATE_DATE">
+      <Position>17</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="975" parent="44" name="RECORD_VERSION">
+      <Position>18</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="976" parent="44" name="DELETED_FLAG">
+      <Position>19</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="977" parent="44" name="DELETED_BY">
+      <Position>20</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="978" parent="44" name="DELETION_DATE">
+      <Position>21</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="979" parent="44" name="SHARDING_ID">
+      <Position>22</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="980" parent="44" name="ATTRIBUTE1">
+      <Position>23</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="981" parent="44" name="ATTRIBUTE2">
+      <Position>24</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="982" parent="44" name="ATTRIBUTE3">
+      <Position>25</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="983" parent="44" name="ATTRIBUTE4">
+      <Position>26</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="984" parent="44" name="ATTRIBUTE5">
+      <Position>27</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="985" parent="44" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>REAPPROVED_REC_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="986" parent="45" name="PAYMENT_REL_BILLING_INFO_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="987" parent="45" name="BILLING_GROUP_SUM_INFO_ID">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="988" parent="45" name="BATCH_SEQ">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="989" parent="45" name="CON_ITEM_ID">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="990" parent="45" name="CONTRACT_INFO_ID">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="991" parent="45" name="CONTRACT_NUM">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="992" parent="45" name="PAYMENT_PHASE_SEQ">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="993" parent="45" name="PAYMENT_STAGE_ENUM_ID">
+      <Position>8</Position>
+      <DataType>int(20)|0</DataType>
+    </column>
+    <column id="994" parent="45" name="PROJECT_INFO_ID">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="995" parent="45" name="PROJECT_NUMBER">
+      <Position>10</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="996" parent="45" name="BILLING_INFO_ID">
+      <Position>11</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="997" parent="45" name="BILLING_CODE">
+      <Position>12</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="998" parent="45" name="BILLING_INCLUSIVE_TAX_AMT">
+      <Position>13</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="999" parent="45" name="BILLING_DATE">
+      <Position>14</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="1000" parent="45" name="THIS_PAYMENT_AMOUNT">
+      <Position>15</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="1001" parent="45" name="PAYMENT_RULE_ENUM_ID">
+      <Position>16</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1002" parent="45" name="PAYMENT_INFO_ID">
+      <Position>17</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1003" parent="45" name="PAYMENT_INFO_CODE">
+      <Position>18</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="1004" parent="45" name="PAYMENT_LIST_ID">
+      <Position>19</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1005" parent="45" name="LIST_SEQ">
+      <Position>20</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1006" parent="45" name="IS_REVERSED_FLAG">
+      <Position>21</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="1007" parent="45" name="REVERSED_ORIGINAL_INFO_ID">
+      <Position>22</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1008" parent="45" name="RESCINDED_TIME">
+      <Position>23</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="1009" parent="45" name="CHARGE_TYPE_ENUM_ID">
+      <Position>24</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1010" parent="45" name="CON_PUSH_AMOUNT_FLAG">
+      <Position>25</Position>
+      <DataType>varchar(1)|0</DataType>
+    </column>
+    <column id="1011" parent="45" name="CON_PUSH_AMT_ERR_MSG">
+      <Position>26</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="1012" parent="45" name="IS_SPLIT_SUCCESS">
+      <Position>27</Position>
+      <DataType>varchar(1)|0</DataType>
+    </column>
+    <column id="1013" parent="45" name="PO_NUMBER">
+      <Position>28</Position>
+      <Comment>订单编号</Comment>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="1014" parent="45" name="ORDER_TRANSACTION_ORG_ID">
+      <Position>29</Position>
+      <Comment>订单所属组织ID</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1015" parent="45" name="ORDER_ORG_CODE">
+      <Position>30</Position>
+      <Comment>订单所属组织</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="1016" parent="45" name="ORDER_ORG_NAME">
+      <Position>31</Position>
+      <Comment>订单所属组织名称</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="1017" parent="45" name="CON_SIGN_TRANSACTION_ORG_NAME">
+      <Position>32</Position>
+      <Comment>合同签约组织名称</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="1018" parent="45" name="SETTLE_ACC_CODE">
+      <Position>33</Position>
+      <Comment>结算单编号</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="1019" parent="45" name="SETTLE_ACC_TOTAL_AMT">
+      <Position>34</Position>
+      <Comment>结算单金额</Comment>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="1020" parent="45" name="ORDER_HEADER_ID">
+      <Position>35</Position>
+      <Comment>订单信息头ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1021" parent="45" name="CREATED_BY">
+      <Position>36</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1022" parent="45" name="CREATION_DATE">
+      <Position>37</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="1023" parent="45" name="LAST_UPDATED_BY">
+      <Position>38</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1024" parent="45" name="LAST_UPDATE_DATE">
+      <Position>39</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="1025" parent="45" name="RECORD_VERSION">
+      <Position>40</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="1026" parent="45" name="DELETED_FLAG">
+      <Position>41</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="1027" parent="45" name="DELETED_BY">
+      <Position>42</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1028" parent="45" name="DELETION_DATE">
+      <Position>43</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="1029" parent="45" name="SHARDING_ID">
+      <Position>44</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1030" parent="45" name="ATTRIBUTE1">
+      <Position>45</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1031" parent="45" name="ATTRIBUTE2">
+      <Position>46</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1032" parent="45" name="ATTRIBUTE3">
+      <Position>47</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1033" parent="45" name="ATTRIBUTE4">
+      <Position>48</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1034" parent="45" name="ATTRIBUTE5">
+      <Position>49</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="1035" parent="45" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PAYMENT_REL_BILLING_INFO_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="1036" parent="46" name="PAYMENT_REL_INVOICE_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1037" parent="46" name="PAYMENT_REL_BILLING_INFO_ID">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1038" parent="46" name="PAYMENT_SELECT_LIST_ID">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1039" parent="46" name="PAYMENT_CODE">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1040" parent="46" name="PAYMENT_AMOUNT">
+      <Position>5</Position>
+      <DataType>decimal(38,16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1041" parent="46" name="BILLING_INFO_ID">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1042" parent="46" name="BILLING_NO">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1043" parent="46" name="BILLING_PAYMENT_AMOUNT">
+      <Position>8</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="1044" parent="46" name="INVOICE_BATCH_ID">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1045" parent="46" name="INVOICE_CODE">
+      <Position>10</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="1046" parent="46" name="INVOICE_NO">
+      <Position>11</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1047" parent="46" name="PRICE_TAX_TOTAL_AMT">
+      <Position>12</Position>
+      <DataType>decimal(38,16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1048" parent="46" name="INVOICE_SCALE">
+      <Position>13</Position>
+      <DataType>decimal(18,8)|0</DataType>
+    </column>
+    <column id="1049" parent="46" name="INVOICE_PAYMENT_AMOUNT">
+      <Position>14</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="1050" parent="46" name="REMARK">
+      <Position>15</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="1051" parent="46" name="CREATED_BY">
+      <Position>16</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1052" parent="46" name="CREATION_DATE">
+      <Position>17</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="1053" parent="46" name="LAST_UPDATED_BY">
+      <Position>18</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1054" parent="46" name="LAST_UPDATE_DATE">
+      <Position>19</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="1055" parent="46" name="RECORD_VERSION">
+      <Position>20</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="1056" parent="46" name="DELETED_FLAG">
+      <Position>21</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="1057" parent="46" name="DELETED_BY">
+      <Position>22</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1058" parent="46" name="DELETION_DATE">
+      <Position>23</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="1059" parent="46" name="SHARDING_ID">
+      <Position>24</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1060" parent="46" name="ATTRIBUTE1">
+      <Position>25</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1061" parent="46" name="ATTRIBUTE2">
+      <Position>26</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1062" parent="46" name="ATTRIBUTE3">
+      <Position>27</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1063" parent="46" name="ATTRIBUTE4">
+      <Position>28</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1064" parent="46" name="ATTRIBUTE5">
+      <Position>29</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1065" parent="46" name="ATTRIBUTE6">
+      <Position>30</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1066" parent="46" name="ATTRIBUTE7">
+      <Position>31</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1067" parent="46" name="ATTRIBUTE8">
+      <Position>32</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1068" parent="46" name="ATTRIBUTE9">
+      <Position>33</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1069" parent="46" name="ATTRIBUTE10">
+      <Position>34</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="1070" parent="46" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PAYMENT_REL_INVOICE_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="1071" parent="47" name="PAYMENT_REL_REC_INFO_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1072" parent="47" name="PAYMENT_REL_BILLING_INFO_ID">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1073" parent="47" name="PAYMENT_INFO_ID">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1074" parent="47" name="PAYMENT_INFO_CODE">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1075" parent="47" name="PAYMENT_AMOUNT">
+      <Position>5</Position>
+      <DataType>decimal(38,16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1076" parent="47" name="BILLING_INFO_ID">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1077" parent="47" name="BILLING_CODE">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1078" parent="47" name="PRICE_TAX_TOTAL_AMT">
+      <Position>8</Position>
+      <DataType>decimal(38,16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1079" parent="47" name="THIS_PAYMENT_AMOUNT">
+      <Position>9</Position>
+      <DataType>decimal(38,16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1080" parent="47" name="BILLING_DETAIL_ID">
+      <Position>10</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1081" parent="47" name="BILLING_TAX_INCLUSIVE_AMT">
+      <Position>11</Position>
+      <DataType>decimal(38,16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1082" parent="47" name="ORDER_REC_TRA_ID">
+      <Position>12</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1083" parent="47" name="LINE_SCALE">
+      <Position>13</Position>
+      <DataType>decimal(18,8)|0</DataType>
+    </column>
+    <column id="1084" parent="47" name="DISTRIBUTION_PAYMENT_AMT">
+      <Position>14</Position>
+      <DataType>decimal(38,16)|0</DataType>
+    </column>
+    <column id="1085" parent="47" name="PAYMENT_LIST_ID">
+      <Position>15</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1086" parent="47" name="LIST_SEQ">
+      <Position>16</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1087" parent="47" name="PAYMENT_DATE">
+      <Position>17</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="1088" parent="47" name="TRANSACTION_TYPE_ENUM_ID">
+      <Position>18</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1089" parent="47" name="TRANSACTION_ID">
+      <Position>19</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="1090" parent="47" name="PO_NUMBER">
+      <Position>20</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="1091" parent="47" name="ORDER_LINE_ID">
+      <Position>21</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1092" parent="47" name="REC_TRANSACTION_ORG_ID">
+      <Position>22</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1093" parent="47" name="RECEIVED_ORG_CODE">
+      <Position>23</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="1094" parent="47" name="CREATED_BY">
+      <Position>24</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1095" parent="47" name="CREATION_DATE">
+      <Position>25</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="1096" parent="47" name="LAST_UPDATED_BY">
+      <Position>26</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1097" parent="47" name="LAST_UPDATE_DATE">
+      <Position>27</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="1098" parent="47" name="RECORD_VERSION">
+      <Position>28</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="1099" parent="47" name="DELETED_FLAG">
+      <Position>29</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="1100" parent="47" name="DELETED_BY">
+      <Position>30</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1101" parent="47" name="DELETION_DATE">
+      <Position>31</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="1102" parent="47" name="SHARDING_ID">
+      <Position>32</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1103" parent="47" name="ATTRIBUTE1">
+      <Position>33</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1104" parent="47" name="ATTRIBUTE2">
+      <Position>34</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1105" parent="47" name="ATTRIBUTE3">
+      <Position>35</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1106" parent="47" name="ATTRIBUTE4">
+      <Position>36</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1107" parent="47" name="ATTRIBUTE5">
+      <Position>37</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="1108" parent="47" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PAYMENT_REL_REC_INFO_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="1109" parent="48" name="INSTANCE_LOG_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1110" parent="48" name="SERVICE_NAME">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="1111" parent="48" name="SERVICE_DESC">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="1112" parent="48" name="PRI_KEY">
+      <Position>4</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="1113" parent="48" name="SERVICE_FLAG">
+      <Position>5</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1114" parent="48" name="SERVICE_MESSAGE">
+      <Position>6</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="1115" parent="48" name="BATCH_ID">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="1116" parent="48" name="INSTANCE_ID">
+      <Position>8</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="1117" parent="48" name="ERROR_COLLECTION">
+      <Position>9</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="1118" parent="48" name="SHARDING_ID">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1119" parent="48" name="OPERATE_BY">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1120" parent="48" name="IMP_ERP_DATE">
+      <Position>12</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="1121" parent="48" name="ATTRIBUTE1">
+      <Position>13</Position>
+      <Comment>扩展字段1</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="1122" parent="48" name="ATTRIBUTE2">
+      <Position>14</Position>
+      <Comment>扩展字段2</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="1123" parent="48" name="ATTRIBUTE3">
+      <Position>15</Position>
+      <Comment>扩展字段3</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="1124" parent="48" name="ATTRIBUTE4">
+      <Position>16</Position>
+      <Comment>扩展字段4</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="1125" parent="48" name="ATTRIBUTE5">
+      <Position>17</Position>
+      <Comment>扩展字段5</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <key id="1126" parent="48" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>INSTANCE_LOG_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="1127" parent="49" name="STATUS_TRACK_REC_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1128" parent="49" name="P_PROC_STAT_TYPE_ENUM_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1129" parent="49" name="RECEIPTES_TYPE">
+      <Position>3</Position>
+      <DataType>varchar(1)|0</DataType>
+    </column>
+    <column id="1130" parent="49" name="RECEIPTS_ID">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1131" parent="49" name="OLD_STATUS_ENUM_ID">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1132" parent="49" name="NEW_STATUS_ENUM_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1133" parent="49" name="STAFF_NUM_BY_CHANGED">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1134" parent="49" name="REMARK">
+      <Position>8</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="1135" parent="49" name="CREATED_BY">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1136" parent="49" name="CREATION_DATE">
+      <Position>10</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="1137" parent="49" name="LAST_UPDATED_BY">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1138" parent="49" name="LAST_UPDATE_DATE">
+      <Position>12</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="1139" parent="49" name="RECORD_VERSION">
+      <Position>13</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="1140" parent="49" name="DELETED_FLAG">
+      <Position>14</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="1141" parent="49" name="DELETED_BY">
+      <Position>15</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1142" parent="49" name="DELETION_DATE">
+      <Position>16</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="1143" parent="49" name="SHARDING_ID">
+      <Position>17</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1144" parent="49" name="ATTRIBUTE1">
+      <Position>18</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1145" parent="49" name="ATTRIBUTE2">
+      <Position>19</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1146" parent="49" name="ATTRIBUTE3">
+      <Position>20</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1147" parent="49" name="ATTRIBUTE4">
+      <Position>21</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1148" parent="49" name="ATTRIBUTE5">
+      <Position>22</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1149" parent="49" name="ATTRIBUTE6">
+      <Position>23</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1150" parent="49" name="ATTRIBUTE7">
+      <Position>24</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1151" parent="49" name="ATTRIBUTE8">
+      <Position>25</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1152" parent="49" name="ATTRIBUTE9">
+      <Position>26</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1153" parent="49" name="ATTRIBUTE10">
+      <Position>27</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <index id="1154" parent="49" name="PAYMENT_STATUS_TRACK_REC_IDX1">
+      <ColNames>RECEIPTS_ID</ColNames>
+    </index>
+    <index id="1155" parent="49" name="PAYMENT_STATUS_TRACK_REC_IDX2">
+      <ColNames>NEW_STATUS_ENUM_ID</ColNames>
+    </index>
+    <key id="1156" parent="49" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>STATUS_TRACK_REC_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="1157" parent="50" name="TASK_LOCKED_REC_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1158" parent="50" name="TASK_NAME">
+      <Position>2</Position>
+      <DataType>varchar(240)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1159" parent="50" name="TASK_DESC">
+      <Position>3</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="1160" parent="50" name="IS_SCHEDULE_TASK_FLAG">
+      <Position>4</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1161" parent="50" name="TASK_CTREATOR_ID">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1162" parent="50" name="TASK_CTREATOR_NAME">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="1163" parent="50" name="IS_DOING_FLAG">
+      <Position>7</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1164" parent="50" name="TASK_START_TIME">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1165" parent="50" name="TASK_END_TIME">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="1166" parent="50" name="REMARK">
+      <Position>10</Position>
+      <DataType>varchar(240)|0</DataType>
+    </column>
+    <column id="1167" parent="50" name="CREATED_BY">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1168" parent="50" name="CREATION_DATE">
+      <Position>12</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="1169" parent="50" name="LAST_UPDATED_BY">
+      <Position>13</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1170" parent="50" name="LAST_UPDATE_DATE">
+      <Position>14</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="1171" parent="50" name="RECORD_VERSION">
+      <Position>15</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="1172" parent="50" name="DELETED_FLAG">
+      <Position>16</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="1173" parent="50" name="DELETED_BY">
+      <Position>17</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1174" parent="50" name="DELETION_DATE">
+      <Position>18</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="1175" parent="50" name="SHARDING_ID">
+      <Position>19</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1176" parent="50" name="ATTRIBUTE1">
+      <Position>20</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1177" parent="50" name="ATTRIBUTE2">
+      <Position>21</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1178" parent="50" name="ATTRIBUTE3">
+      <Position>22</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1179" parent="50" name="ATTRIBUTE4">
+      <Position>23</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1180" parent="50" name="ATTRIBUTE5">
+      <Position>24</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="1181" parent="50" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TASK_LOCKED_REC_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <argument id="1182" parent="51">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>varchar(100)|0</DataType>
+    </argument>
+    <argument id="1183" parent="51" name="p_value_id">
+      <DataType>int(11)|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>

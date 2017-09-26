@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../BillingExtractSplit/.idea/BillingExtractSplit.iml" filepath="$PROJECT_DIR$/../BillingExtractSplit/.idea/BillingExtractSplit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PaymentCreate.iml" filepath="$PROJECT_DIR$/.idea/PaymentCreate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SeleniumDemo/.idea/SeleniumDemo.iml" filepath="$PROJECT_DIR$/../SeleniumDemo/.idea/SeleniumDemo.iml" />
+    </modules>
+  </component>
+</project>
